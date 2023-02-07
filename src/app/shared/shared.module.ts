@@ -1,6 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
+//Modulos 
+import { ReactiveFormsModule } from '@angular/forms';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 //Angular Material 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatTableModule} from '@angular/material/table';
@@ -17,7 +25,6 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 //Componentes
-import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +44,9 @@ import { SpinnerComponent } from './spinner/spinner.component';
     MatCardModule,
     MatSnackBarModule,
     MatProgressBarModule,
-    MatGridListModule
+    MatGridListModule, 
+    ReactiveFormsModule,
+    HttpClientModule
   ], 
   exports:[
     MatSlideToggleModule,
@@ -54,7 +63,9 @@ import { SpinnerComponent } from './spinner/spinner.component';
     MatSnackBarModule,
     SpinnerComponent,
     MatProgressBarModule,
-    MatGridListModule
+    MatGridListModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }
